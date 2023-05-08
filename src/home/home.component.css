@@ -1,3 +1,11 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+
+  .log {
+    margin-left: 1090px;
+  }
+
+  .butt {
+    margin-left: 30px;
+  }

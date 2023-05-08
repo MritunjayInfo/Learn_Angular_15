@@ -1,12 +1,16 @@
 
-<mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span class="example-spacer"></span>
-  </mat-toolbar>
+<mat-toolbar *ngIf="ismenurequried" color="primary">
+  <button routerLink="" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>home</mat-icon>
+  </button>
+    <!-- <a routerLink="" mat-raised-button> <mat-icon>home</mat-icon></a> -->
 
+    <a class="butt" routerLink="/user" mat-raised-button >User</a>
+  
+    <a class="log" routerLink="/login" mat-raised-button >Logout</a>
 
+  <span class="example-spacer"></span>
+</mat-toolbar>
 <div>
     <h1>Welcome to Angular-15</h1>
 </div>

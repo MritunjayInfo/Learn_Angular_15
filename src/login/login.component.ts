@@ -15,7 +15,7 @@ export class LoginComponent {
 
   constructor(private builder: FormBuilder, private toastr: ToastrService,
     private service: AuthService, private router: Router) {
-
+      sessionStorage.clear();
   }
 
   loginform = this.builder.group({
