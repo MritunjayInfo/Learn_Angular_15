@@ -33,6 +33,7 @@ export class UserlistingComponent {
   }
 
   UpdateUser(code: any) {
+    console.log('User updated successfully');
     const poup = this.dialog.open(UpdatepopupComponent,{
       enterAnimationDuration:'1000ms',
       exitAnimationDuration:'500ms',
@@ -45,6 +46,17 @@ export class UserlistingComponent {
       this.Loaduser();
     });
   }
+
+  // DeleteUser(id:number){
+  //    console.log('User deleted successfully');
+  //   if (confirm("Are you sure?")) {
+  //     this.service.deleteUser(id).subscribe({
+  //       next: (res) =>{
+  //         this.Loaduser();
+  //       }
+  //     })
+  //   }
+  // }
 
   // Opendialog(){
     

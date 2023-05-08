@@ -36,4 +36,9 @@ export class AuthService {
   GetUserrole(){
     return sessionStorage.getItem('userrole')!=null? sessionStorage.getItem('userrole')?.toString():'';
   }
+
+  deleteUser(code: any) {
+    return this.http.delete(this.Api_Url + '/' + code);
+  }
+  
 }
