@@ -20,7 +20,7 @@ export class RegisterComponent {
     id:this.builder.control('',Validators.compose([Validators.required,Validators.minLength(5)])),
     name:this.builder.control('',Validators.required),
     email:this.builder.control('',Validators.compose([Validators.required,Validators.email])),
-    password:this.builder.control('',Validators.compose([Validators.required,Validators.pattern('(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}')])),
+    password:this.builder.control('',Validators.compose([Validators.required])),
     gender:this.builder.control('male'),
     role:this.builder.control(''),
     isactive:this.builder.control(true),
@@ -29,7 +29,7 @@ export class RegisterComponent {
   proceedregisteration(){
     if(this.registerform.valid){
       this.service.Proceedregister(this.registerform.value).subscribe(res =>{
-        console.log(this.registerform);
+        //console.log(this.registerform);
         this.toastr.success('Please contact admin for enable access','Registered Successfully');
         this.router.navigate(['login']);
       });

@@ -53,9 +53,17 @@
       "gender": "female",
       "role": "test3",
       "isactive": false
+    },
+    {
+      "id": "ramesh",
+      "name": "Ramesh",
+      "email": "ramesh@gmail.com",
+      "password": "Ramesh@123",
+      "gender": "male",
+      "role": "",
+      "isactive": true
     }
   ],
-
   "role": [
     {
       "code": "staff",
