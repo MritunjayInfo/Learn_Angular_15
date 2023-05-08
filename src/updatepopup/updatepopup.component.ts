@@ -19,7 +19,8 @@ export class UpdatepopupComponent implements OnInit {
 
   constructor(private builder:FormBuilder,private toastr:ToastrService,
     private service:AuthService, private router: Router,
-    @Inject(MAT_DIALOG_DATA) public data: any){
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private dialogRef: MatDialogRef<UpdatepopupComponent>){
 
   }
   ngOnInit(): void {
@@ -53,9 +54,13 @@ export class UpdatepopupComponent implements OnInit {
 
   updateuser(){
     if(this.updateform.valid){
-
+      this.service.Updateuser(this.updateform.value.id,this.updateform.value).subscribe(res => {
+        console.log(this.updateform);
+        this.toastr.success('Updated successfully.');
+        this.dialogRef.close();
+      });
     }else{
-      this.toastr.warning('Please Select Role')
+      this.toastr.warning('Please Select Role.')
     }
   }
 

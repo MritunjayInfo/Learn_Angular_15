@@ -5,7 +5,7 @@
     <mat-card-content>
         <form class="example-form" [formGroup]="updateform" (ngSubmit)="updateuser()">
 
-            <mat-form-field class="example-full-width">
+            <!-- <mat-form-field class="example-full-width">
                 <mat-label>User Name</mat-label>
                 <input matInput formControlName="id">
               </mat-form-field>
@@ -18,7 +18,7 @@
                 <mat-form-field class="example-full-width">
                   <mat-label>Email</mat-label>
                   <input type="email" matInput formControlName="email">
-                </mat-form-field>
+                </mat-form-field> -->
 
               <mat-form-field class="example-full-width">
                 <mat-label>Role</mat-label>
@@ -34,8 +34,8 @@
                 <mat-checkbox formControlName="isactive" class="example-margin">Is Active</mat-checkbox>
               </div>
               <div>
-                <button mat-raised-button color="primary">Save</button>
-                <a mat-dialog-close mat-raised-button color="accent">Close</a>
+                <button matTooltip="Save" mat-raised-button color="primary">Save</button>
+                <a matTooltip="Close" mat-dialog-close mat-raised-button color="accent">Close</a>
               </div>
           
           </form>

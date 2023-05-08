@@ -1,25 +1,21 @@
 
-<!-- <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <div>
-      <a routerLink="">Home</a>
+<mat-toolbar *ngIf="ismenurequried" color="primary">
+  <button  matTooltip="Home" routerLink="" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>home</mat-icon>
+  </button>
+    <!-- <a routerLink="" mat-raised-button> <mat-icon>home</mat-icon></a> -->
 
-      <a routerLink="/user" mat-raised-button color="warn">User</a>
-    
-      <a routerLink="/login">Logout</a>
-    </div>
-    <span class="example-spacer"></span>
-  </mat-toolbar> -->
+    <a  matTooltip="User" class="butt" *ngIf="isadminuser" routerLink="/user" mat-raised-button >User</a>
+  
+    <a  matTooltip="Logout" class="log" routerLink="/login" mat-raised-button >Logout</a>
+
+  <span class="example-spacer"></span>
+</mat-toolbar>
 
 <div class="content" role="main" style="width: 100%;display: block;"> 
     <router-outlet></router-outlet>
 </div>
 
-    <!-- <a routerLink="/user">User</a> -->
-    <!-- <button routerLink="/user" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      User</button> -->
 
 
 

@@ -33,18 +33,21 @@ export class UserlistingComponent {
   }
 
   UpdateUser(code: any) {
-    this.dialog.open(UpdatepopupComponent,{
+    const poup = this.dialog.open(UpdatepopupComponent,{
       enterAnimationDuration:'1000ms',
       exitAnimationDuration:'500ms',
       width:'50%',
       data:{
         usercode:code
       }
-    })
+    });
+    poup.afterClosed().subscribe(res => {
+      this.Loaduser();
+    });
   }
 
-  Opendialog(){
-
-  }
+  // Opendialog(){
+    
+  // }
 
 }
